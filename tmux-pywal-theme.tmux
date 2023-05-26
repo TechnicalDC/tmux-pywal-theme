@@ -1,7 +1,7 @@
 #!/bin/bash
 . "${HOME}/.cache/wal/colors.sh"
 
-pywal_black="#101521"
+pywal_black="${color0}"
 pywal_blue="#5CCFE6"
 pywal_yellow="#E6B450"
 pywal_red="#F28779"
