@@ -1,12 +1,14 @@
 #!/bin/bash
-ayu_black="#101521"
-ayu_blue="#5CCFE6"
-ayu_yellow="#E6B450"
-ayu_red="#F28779"
-ayu_white="#CBCCC6"
-ayu_green="#BAE67E"
-ayu_visual_grey="#607080"
-ayu_comment_grey="#5C6773"
+. "${HOME}/.cache/wal/colors.sh"
+
+pywal_black="#101521"
+pywal_blue="#5CCFE6"
+pywal_yellow="#E6B450"
+pywal_red="#F28779"
+pywal_white="#CBCCC6"
+pywal_green="#BAE67E"
+pywal_visual_grey="#607080"
+pywal_comment_grey="#5C6773"
 
 get() {
    local option=$1
@@ -39,50 +41,50 @@ set "status-left-length" "100"
 set "status-right-length" "100"
 set "status-right-attr" "none"
 
-set "message-fg" "$ayu_white"
-set "message-bg" "$ayu_black"
+set "message-fg" "$pywal_white"
+set "message-bg" "$pywal_black"
 
-set "message-command-fg" "$ayu_white"
-set "message-command-bg" "$ayu_black"
+set "message-command-fg" "$pywal_white"
+set "message-command-bg" "$pywal_black"
 
 set "status-attr" "none"
 set "status-left-attr" "none"
 
-setw "window-status-fg" "$ayu_black"
-setw "window-status-bg" "$ayu_black"
+setw "window-status-fg" "$pywal_black"
+setw "window-status-bg" "$pywal_black"
 setw "window-status-attr" "none"
 
-setw "window-status-activity-bg" "$ayu_black"
-setw "window-status-activity-fg" "$ayu_black"
+setw "window-status-activity-bg" "$pywal_black"
+setw "window-status-activity-fg" "$pywal_black"
 setw "window-status-activity-attr" "none"
 
 setw "window-status-separator" ""
 
-set "window-style" "fg=$ayu_comment_grey"
-set "window-active-style" "fg=$ayu_white"
+set "window-style" "fg=$pywal_comment_grey"
+set "window-active-style" "fg=$pywal_white"
 
-set "pane-border-fg" "$ayu_white"
-set "pane-border-bg" "$ayu_black"
-set "pane-active-border-fg" "$ayu_green"
-set "pane-active-border-bg" "$ayu_black"
+set "pane-border-fg" "$pywal_white"
+set "pane-border-bg" "$pywal_black"
+set "pane-active-border-fg" "$pywal_green"
+set "pane-active-border-bg" "$pywal_black"
 
-set "display-panes-active-colour" "$ayu_yellow"
-set "display-panes-colour" "$ayu_blue"
+set "display-panes-active-colour" "$pywal_yellow"
+set "display-panes-colour" "$pywal_blue"
 
-set "status-bg" "$ayu_black"
-set "status-fg" "$ayu_white"
+set "status-bg" "$pywal_black"
+set "status-fg" "$pywal_white"
 
-set "@prefix_highlight_fg" "$ayu_black"
-set "@prefix_highlight_bg" "$ayu_green"
-set "@prefix_highlight_copy_mode_attr" "fg=$ayu_black,bg=$ayu_green"
+set "@prefix_highlight_fg" "$pywal_black"
+set "@prefix_highlight_bg" "$pywal_green"
+set "@prefix_highlight_copy_mode_attr" "fg=$pywal_black,bg=$pywal_green"
 set "@prefix_highlight_output_prefix" "  "
 
-status_widgets=$(get "@ayu_widgets")
-time_format=$(get "@ayu_time_format" "%R")
-date_format=$(get "@ayu_date_format" "%d.%m.%Y")
+status_widgets=$(get "@pywal_widgets")
+time_format=$(get "@pywal_time_format" "%R")
+date_format=$(get "@pywal_date_format" "%d.%m.%Y")
 
-set "status-right" "#[fg=$ayu_white,bg=$ayu_black,nounderscore,noitalics]  ${time_format}    ${date_format} #[fg=$ayu_visual_grey,bg=$ayu_black]#[fg=$ayu_visual_grey,bg=$ayu_visual_grey]#[fg=$ayu_white, bg=$ayu_visual_grey]${status_widgets} #[fg=$ayu_green,bg=$ayu_visual_grey,nobold,nounderscore,noitalics]#[fg=$ayu_black,bg=$ayu_green,bold] #h "
-set "status-left" "#[fg=$ayu_black,bg=$ayu_green,bold]   #S #{prefix_highlight}#[fg=$ayu_green,bg=$ayu_black,nobold,nounderscore,noitalics]"
+set "status-right" "#[fg=$pywal_white,bg=$pywal_black,nounderscore,noitalics]  ${time_format}    ${date_format} #[fg=$pywal_visual_grey,bg=$pywal_black]#[fg=$pywal_visual_grey,bg=$pywal_visual_grey]#[fg=$pywal_white, bg=$pywal_visual_grey]${status_widgets} #[fg=$pywal_green,bg=$pywal_visual_grey,nobold,nounderscore,noitalics]#[fg=$pywal_black,bg=$pywal_green,bold] #h "
+set "status-left" "#[fg=$pywal_black,bg=$pywal_green,bold]   #S #{prefix_highlight}#[fg=$pywal_green,bg=$pywal_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$ayu_black,bg=$ayu_black,nobold,nounderscore,noitalics]#[fg=$ayu_white,bg=$ayu_black] #I  #W #[fg=$ayu_black,bg=$ayu_black,nobold,nounderscore,noitalics]"
-set "window-status-current-format" "#[fg=$ayu_black,bg=$ayu_yellow,nobold,nounderscore,noitalics]#[fg=$ayu_black,bg=$ayu_yellow,nobold] #I  #W #[fg=$ayu_yellow,bg=$ayu_black,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$pywal_black,bg=$pywal_black,nobold,nounderscore,noitalics]#[fg=$pywal_white,bg=$pywal_black] #I  #W #[fg=$pywal_black,bg=$pywal_black,nobold,nounderscore,noitalics]"
+set "window-status-current-format" "#[fg=$pywal_black,bg=$pywal_yellow,nobold,nounderscore,noitalics]#[fg=$pywal_black,bg=$pywal_yellow,nobold] #I  #W #[fg=$pywal_yellow,bg=$pywal_black,nobold,nounderscore,noitalics]"

@@ -1,11 +1,5 @@
-# tmux-ayu-theme
-A dark tmux color scheme for terminal that support [True Color](https://en.wikipedia.org/wiki/Color_depth#True_color_.2824-bit.29), based on [ayu.vim](https://github.com/joshdick/ayu.vim), which is inspired by [One Dark syntax theme](https://github.com/atom/one-dark-syntax) for the [Atom text editor](https://atom.io).
-
-## Why?
-
-> This is ayu version of onedark theme
-
-I wanted both neovim and tmux to share the same color scheme.
+# tmux-pywal-theme
+A dark tmux color scheme for tmux
 
 ### Set Options
 
@@ -13,10 +7,10 @@ I wanted both neovim and tmux to share the same color scheme.
 
 #### widgets
 
-Widgets can be controlled by setting `@ayu_widgets`, for example:
+Widgets can be controlled by setting `@pywal_widgets`, for example:
 
 ```
-set -g @ayu_widgets "#(date +%s)"
+set -g @pywal_widgets "#(date +%s)"
 ```
 
 Once set, these widgets will show on the right.
@@ -25,10 +19,10 @@ Once set, these widgets will show on the right.
 
 #### Time format
 
-Time format can be controlled by setting `@ayu_time_format`, for example:
+Time format can be controlled by setting `@pywal_time_format`, for example:
 
 ```
-set -g @ayu_time_format "%I:%M %p"
+set -g @pywal_time_format "%I:%M %p"
 ```
 
 `%I` - The hour as a decimal number using a 12-hour clock  
@@ -41,10 +35,10 @@ These modifiers were taken from from [strftime manpage](http://man7.org/linux/ma
 
 #### Date format
 
-Date format can be controlled by setting `@ayu_date_format`, for example:
+Date format can be controlled by setting `@pywal_date_format`, for example:
 
 ```
-set -g @ayu_date_format "%D"
+set -g @pywal_date_format "%D"
 ```
 
 `%D` - Equivalent to %m/%d/%y (American format).   
@@ -61,7 +55,7 @@ These modifiers were taken from from [strftime manpage](http://man7.org/linux/ma
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
 ```
-set -g @plugin 'TechnicalDC/tmux-ayu-theme'
+set -g @plugin 'TechnicalDC/tmux-pywal-theme'
 ```
 
 Hit `prefix + I` to fetch the plugin and source it.
@@ -71,13 +65,13 @@ Hit `prefix + I` to fetch the plugin and source it.
 Clone the repo:
 
 ```
-$ git clone https://github.com/TechnicalDC/tmux-ayu-theme /a/path/you/choose
+$ git clone https://github.com/TechnicalDC/tmux-pywal-theme /a/path/you/choose
 ```
 
 Add this line to the bottom of `.tmux.conf`:
 
 ```
-run-shell /a/path/you/choose tmux-ayu-theme.tmux
+run-shell /a/path/you/choose tmux-pywal-theme.tmux
 ```
 
 Reload TMUX environment (type this in terminal)
@@ -99,7 +93,7 @@ $ tmux source-file ~/.tmux.conf
    
 ### Widgets not working
 
-   Make sure that you put the `set -g @plugin 'TechnicalDC/tmux-ayu-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
+   Make sure that you put the `set -g @plugin 'TechnicalDC/tmux-pywal-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
 
 ### True Color
 
