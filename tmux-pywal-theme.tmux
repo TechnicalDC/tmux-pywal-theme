@@ -2,13 +2,13 @@
 . "${HOME}/.cache/wal/colors.sh"
 
 pywal_black="${color0}"
-pywal_blue="#5CCFE6"
-pywal_yellow="#E6B450"
-pywal_red="#F28779"
+pywal_blue="${color4}"
+pywal_yellow="${color3}"
+pywal_red="${color1}"
 pywal_white="#CBCCC6"
-pywal_green="#BAE67E"
-pywal_visual_grey="#607080"
-pywal_comment_grey="#5C6773"
+pywal_green="${color2}"
+pywal_visual_grey="${color8}"
+pywal_comment_grey="${color15}"
 
 get() {
    local option=$1
