@@ -79,29 +79,6 @@ Reload TMUX environment (type this in terminal)
 $ tmux source-file ~/.tmux.conf
 ```
 
-## Issues
-
-### Symbols are missing
-
-   The theme requires Powerline symbols exist and set on your system. Follow [these instructions](https://github.com/powerline/fonts) to install them, then update your terminal fonts to use them.
-
-### Symbols are corrupted
-
-   Patched Powerline fonts aren't picked up when `$LANG` isn't set to `en_US`.  
-   You can change the default locale settings at `/etc/default/locale`.
-
-   
-### Widgets not working
-
-   Make sure that you put the `set -g @plugin 'TechnicalDC/tmux-pywal-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
-
-### True Color
-
-   tmux version <= 2.3, don't support true color in the status line.
-   [Support has been added](https://github.com/tmux/tmux/issues/490), and will probably ship in the next release.
-   You can compile tmux and enjoy True Color right away!
-
-   Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
 
 ### License
 
