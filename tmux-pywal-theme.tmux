@@ -5,6 +5,7 @@ pywal_black="${color0}"
 pywal_blue="${color4}"
 pywal_yellow="${color3}"
 pywal_red="${color1}"
+pywal_magenta="${color5}"
 pywal_white="#CBCCC6"
 pywal_green="${color2}"
 pywal_visual_grey="${color8}"
@@ -83,7 +84,7 @@ status_widgets=$(get "@pywal_widgets")
 time_format=$(get "@pywal_time_format" "%R")
 date_format=$(get "@pywal_date_format" "%d.%m.%Y")
 
-set "status-right" "#[fg=$pywal_white,bg=$pywal_black,nounderscore,noitalics]  ${time_format}    ${date_format} #[fg=$pywal_visual_grey,bg=$pywal_black]#[fg=$pywal_visual_grey,bg=$pywal_visual_grey]#[fg=$pywal_white, bg=$pywal_visual_grey]${status_widgets} #[fg=$pywal_green,bg=$pywal_visual_grey,nobold,nounderscore,noitalics]#[fg=$pywal_black,bg=$pywal_green,bold] #h "
+set "status-right" "#[fg=$pywal_blue,bg=$pywal_black,nounderscore,noitalics]  #[fg=$pywal_white,bg=$pywal_black,nounderscore,noitalics]${time_format} #[fg=$pywal_magenta,bg=$pywal_black,nounderscore,noitalics]   #[fg=$pywal_white,bg=$pywal_black,nounderscore,noitalics]${date_format} #[fg=$pywal_visual_grey,bg=$pywal_black]#[fg=$pywal_visual_grey,bg=$pywal_visual_grey]#[fg=$pywal_white, bg=$pywal_visual_grey]${status_widgets} #[fg=$pywal_green,bg=$pywal_visual_grey,nobold,nounderscore,noitalics]#[fg=$pywal_black,bg=$pywal_green,bold] #h "
 set "status-left" "#[fg=$pywal_black,bg=$pywal_green,bold]   #S #{prefix_highlight}#[fg=$pywal_green,bg=$pywal_black,nobold,nounderscore,noitalics]"
 
 set "window-status-format" "#[fg=$pywal_black,bg=$pywal_black,nobold,nounderscore,noitalics]#[fg=$pywal_white,bg=$pywal_black] #I  #W #[fg=$pywal_black,bg=$pywal_black,nobold,nounderscore,noitalics]"
