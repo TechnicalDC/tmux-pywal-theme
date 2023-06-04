@@ -1,6 +1,8 @@
 # tmux-pywal-theme
 A dark tmux color scheme for tmux
 
+![preview](https://github.com/TechnicalDC/tmux-pywal-theme/blob/main/preview.png)
+
 ### Set Options
 
 **!** Set the following options in your `.tmux.conf`
